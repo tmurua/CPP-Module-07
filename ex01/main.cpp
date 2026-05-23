@@ -14,13 +14,13 @@
 #include <string>
 #include "iter.hpp"
 
-// template function to print one value without changing it
+// template function to print a value without changing it (const reference)
 template <typename ValueType>
 void	printValue(const ValueType &value){
 	std::cout << value << std::endl;
 }
 
-// template function to double one value by changing it directly
+// template function to double a value by changing it (non-const reference) 
 template <typename ValueType>
 void	doubleValue(ValueType &value){
 	value = value + value;
@@ -28,31 +28,31 @@ void	doubleValue(ValueType &value){
 
 int	main(void){
 	int			numbers[3] = {1, 2, 3};
-	std::string	words[3] = {"a", "b", "c"};
+	std::string	letters[3] = {"a", "b", "c"};
 	const int	constNumbers[3] = {10, 20, 30};
 
 	std::cout << "numbers before doubleValue:" << std::endl;
-	::iter(numbers, 3, printValue<int>);
+	iter(numbers, 3, printValue<int>);
 
-	::iter(numbers, 3, doubleValue<int>);
+	iter(numbers, 3, doubleValue<int>);
 
 	std::cout << "numbers after doubleValue:" << std::endl;
-	::iter(numbers, 3, printValue<int>);
+	iter(numbers, 3, printValue<int>);
 
 	std::cout << std::endl;
 
-	std::cout << "words before doubleValue:" << std::endl;
-	::iter(words, 3, printValue<std::string>);
+	std::cout << "letters before doubleValue:" << std::endl;
+	iter(letters, 3, printValue<std::string>);
 
-	::iter(words, 3, doubleValue<std::string>);
+	iter(letters, 3, doubleValue<std::string>);
 
-	std::cout << "words after doubleValue:" << std::endl;
-	::iter(words, 3, printValue<std::string>);
+	std::cout << "letters after doubleValue:" << std::endl;
+	iter(letters, 3, printValue<std::string>);
 
 	std::cout << std::endl;
 
-	std::cout << "const numbers:" << std::endl;
-	::iter(constNumbers, 3, printValue<int>);
+	std::cout << "print const numbers:" << std::endl;
+	iter(constNumbers, 3, printValue<int>);
 
 	return (0);
 }
