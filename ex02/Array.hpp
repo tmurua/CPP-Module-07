@@ -14,6 +14,7 @@
 #define ARRAY_HPP
 
 #include <exception>
+#include <cstddef>	// NULL
 
 // class template that stores an array of elements of type T
 // T is the placeholder for the type stored inside the array
