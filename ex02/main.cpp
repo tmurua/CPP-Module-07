@@ -5,13 +5,14 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: tmurua <tmurua@student.42berlin.de>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/05/25 20:11:23 by tmurua            #+#    #+#             */
-/*   Updated: 2026/05/25 20:47:06 by tmurua           ###   ########.fr       */
+/*   Created: 2026/05/25 18:11:23 by tmurua            #+#    #+#             */
+/*   Updated: 2026/05/25 20:53:32 by tmurua           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 #include <exception>
+#include <string>
 #include "Array.hpp"
 
 int main(void){
